@@ -1,0 +1,1269 @@
+/*-------------------Police d'écriture--------------------*/
+@font-face 
+{
+    font-family: 'robotobold';
+    src: url('fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot');
+    src: url('fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto_bold_macroman/Roboto-Bold-webfont.woff2') format('woff2'),
+         url('fonts/roboto_bold_macroman/Roboto-Bold-webfont.woff') format('woff'),
+         url('fonts/roboto_bold_macroman/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('fonts/roboto_bold_macroman/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'robotoregular';
+    src: url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot');
+    src: url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*-------------------GENERAL--------------------*/
+html
+{
+	scroll-behavior: smooth;
+}
+
+body
+{
+	font-family: 'robotoregular', arial, serif;
+	margin: 0;
+
+}
+
+/*Masquer le menu pour mobiles et tablettes*/
+.dropdown
+{
+	display: none;
+}
+
+/*------------------------------
+-------------HEADER-------------
+------------------------------*/
+nav
+{
+	display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-right: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+/*Logo Webagency*/
+.logo
+{
+	width: 50%;
+	padding-top: 12px;
+	padding-left: 9%;
+}
+
+nav img 
+{
+	height: 51px;
+	margin-top: 6px;
+}
+
+/*Menu pour les grandes résolutions*/
+.menu
+{
+	width: 50%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-right: 6%;
+	margin-bottom: 0;
+}
+
+nav ul
+{
+	display: inline-flex;
+	list-style-type: none;
+	justify-content: flex-end;
+	margin-top: 0;
+}
+
+nav a
+{
+	text-decoration: none;
+	color: rgb(141, 144, 147);
+	margin-right: 15px;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+ul a:hover
+{
+	border-top: 3px solid rgb(107, 177, 215);
+	padding-top: 25px;
+}
+
+/*------------------------------
+---------SLIDER---------
+------------------------------*/
+
+
+/*Légende du slider avec bouton infos*/
+.slider_description
+{
+	margin-left: 8%;
+}
+
+.slider_image h1
+{
+	font-size: 2em;
+	color: white;
+	text-transform: uppercase;
+}
+
+#slider h1
+{
+	font-size: 2em;
+	max-width: 550px;
+	color: white;
+	
+}
+
+#slider p
+{
+	font-size: 1em;
+	margin-top: -15px;
+	color: white;
+}
+
+/*Changer la couleur du mot Webagency en bleu*/
+#span_blue
+{
+	color: rgb(92, 173, 211);
+}
+
+/*Création du bouton info*/
+#bouton_infos
+{
+	background-color: rgb(92, 173, 211);
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 3px;
+	border-bottom: 3px solid rgb(68, 148, 187);
+	font-size: 1em;
+}
+
+/*Bouton avec flèche pour passer au slider précédent*/
+.slider_button_left
+{
+	background: rgba(0, 0, 0, 0.30);
+    border: 0;
+    position: absolute;
+    width: 32.5px;
+    left: 0;
+    border-radius: 0 200px 200px 0;
+    font-size: 25px;
+}
+
+.slider_button_left:hover
+{
+	background: rgb(92, 173, 211);
+}
+
+.slider_button_left i
+{
+	margin-left: 6px;
+	line-height: 65px;
+}
+
+/*Bouton avec flèche pour passer au slider suivant*/
+.slider_button_right
+{
+	background: rgba(0, 0, 0, 0.30);
+    border: 0;
+    position: absolute;
+    width: 32.5px;
+    right: 0;
+    border-radius: 200px 0 0 200px;
+    font-size: 25px;
+}
+
+.slider_button_right:hover
+{
+	background: rgb(92, 173, 211);
+}
+
+.slider_button_right i
+{
+	margin-left: 15px;
+	line-height: 65px;
+}
+
+/*Barre de chargement*/
+.loading_bar
+{
+	background: rgba(0, 0, 0, 0.10);
+    width: 100%;
+    height: 3px;
+    margin-top: -3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/*Largeur de la barre bleue*/
+#loading_span
+{
+	width: 10%;
+    background-color: #6bb1d7;
+    height: 3px;
+    display: block;
+}
+
+/*------------------------------
+---------NOS SERVICES---------
+------------------------------*/
+
+/*centrer le contenu de la section*/
+#nos_services
+{
+	text-align: center;
+	padding-right: 60px;
+    padding-left: 60px;
+    margin: 100px auto 100px auto;
+}
+
+/*Séparateur*/
+.separateur
+{
+	display: flex;
+	justify-content: center;
+	width: 20%;
+	height: 3px;
+	background-color: rgb(237, 237, 237);
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+.circle
+{
+	background: rgb(107, 177, 215);
+ 	border-radius:50%;
+ 	width:15px;
+  	height:15px; 
+  	position: absolute;
+  	transform: translate(15%, -47%);
+}
+
+/*Style des titres des paragraphes et liste*/
+#nos_services p
+{
+	color: rgb(141, 144, 147);
+	font-size: 1em;
+	margin-top: 4px;
+}
+
+#nos_services h3
+{
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: left;
+	font-size: 1.4em;
+}
+
+.titre
+{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.titre h2
+{
+	text-transform: uppercase;
+	font-size: 3em;
+}
+
+.titre p
+{
+	margin-left: 20%;
+	margin-right: 20%
+}
+
+/*Placer image ordi et liste avec texte côte à côte*/
+#contenu_ns
+{
+	display: flex; 
+	flex-direction: row;
+}
+
+#contenu_ns p
+{
+	text-align: left;
+}
+
+/*taille de l'image*/
+.image_ns
+{
+	width: 50%;
+}
+
+/*taille du texte avec liste*/
+.text_ns
+{
+	width: 50%;
+}
+
+/*aligner les icônes avec les listes*/
+.text_ns li
+{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 3%;
+}
+
+
+.text_ns ul
+{
+	list-style-type: none;
+}
+
+/*style des icônes du texte et des ronds bleus*/
+.icones_ns
+{
+	margin-right: 7%;
+}
+
+.icones_ns i
+{
+	border: 2px solid rgb(237, 237, 237);
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	font-size: 1.7em;
+	line-height: 2.2em;
+	color: rgb(107, 177, 215);
+}
+
+.rond_bleu
+{
+	background: rgb(107, 177, 215);
+ 	border-radius:50%;
+ 	width:12px;
+  	height:12px; 
+  	margin-top: -38px;
+    margin-left: 57px;
+    position: absolute;
+}
+
+/*------------------------------
+---------Nos projets---------
+------------------------------*/
+
+/*centrer le contenu de la section*/
+#nos_projets
+{
+	padding: 100px 60px 100px 60px;
+    margin: 0px auto 0 auto;
+    background-color: rgb(245, 245, 245);
+}
+
+/*Style du titre et des paragraphes avec le séparateur*/ 
+#nos_projets h2
+{
+	text-transform: uppercase;
+	font-size: 3em;
+	text-align: center;
+	margin-top: 0;
+}
+
+.text_np
+{
+	margin-left: 20%;
+	margin-right: 20%;
+	color: rgb(141, 144, 147);
+    font-size: 1em;
+    text-align: center;
+}
+
+/*mots importants en bleu*/
+.important
+{
+	color: rgb(107, 177, 215);
+	font-weight: bold;
+}
+
+/*Séparateur*/
+.separateur_np
+{
+	display: flex;
+	justify-content: center;
+	width: 20%;
+	height: 3px;
+	background-color: rgb(237, 237, 237);
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+.circle_np
+{
+	background: rgb(107, 177, 215);
+ 	border-radius:50%;
+ 	width:15px;
+  	height:15px; 
+  	position: absolute;
+  	transform: translate(15%, -47%);
+}
+
+/*Menu des projets*/
+.menu_np
+{
+	text-align: center;
+}
+
+.menu_np ul
+{
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.text_button
+{
+	line-height: 42px;
+}
+
+.menu_np li
+{
+	border: 0;
+	background-color: rgb(229, 229, 229);
+    color: rgb(141, 144, 147);
+    font-weight: bold;
+    border-bottom: 3px solid rgb(229, 229, 229);
+	height: 39px;
+	width: 71px;
+	font-size: 1em;
+	margin: 30px 0 30px 0;
+	padding: 0 15px 0 15px;
+	position: relative;
+	cursor: pointer;
+}
+
+/*arrondir 1er et dernier boutons du menu*/
+.menu_np li:first-child
+{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.menu_np li:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/*Changer couleur boutons en les survolants*/
+.menu_np li:hover
+{
+	background-color: rgb(86, 174, 208);
+	border-bottom: 3px solid rgb(88, 144, 168);
+	color: white;
+}
+
+/*Positionner les flèches du menu*/
+.menu_np i
+{
+	top: 1px;
+	left: -1px;
+	padding: 23px 40px 0 45px;
+	font-size: 30px;
+	color: rgb(88, 144, 168);
+	position: absolute;
+	opacity: 0;
+}
+
+/*Les flèches apparaissent en survolant le menu*/
+.menu_np i:hover
+{
+	opacity: 1;
+}
+
+/*Galerie d'images du portfolio*/
+.portfolio
+{
+	display: flex;
+	flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+figure 
+{
+	width: 23%;
+	margin: 1%;
+	position: relative;
+}
+
+figure img
+{
+	width: 100%;
+}
+
+/*Effet de flou en survolant les image*/
+figure img:hover
+{
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+
+	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+/*Légendes des images*/
+figcaption
+{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transition: all 2s ease;
+	-o-transition: all 2s ease;
+	transition: all 2s ease;
+}
+
+figcaption h3
+{
+	font-size: 1em;
+	padding-left: 3%;
+	margin-bottom: -10px;
+}
+
+figcaption p
+{
+	font-size: 0.8em;
+	padding-left: 3%;
+}
+
+/*Icône de l'oeil*/
+figcaption i
+{
+	position: absolute;
+	left: 9px;
+	bottom: 10px;
+}
+
+/*Style et poitionnement de l'oeil*/
+.eyes
+{
+	background-color: rgb(69, 145, 177);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid white;
+	font-size: 1.2em;
+	position: absolute;
+	right: 10px;
+	bottom: 48px;
+}
+
+/* pour afficher les légendes au passage de la souris */
+
+/*Le signe ">" signifie qu'on séléctionne l'élément enfant figcaption 
+qui est situé dans son élément parent figure. Ainsi, l'effet flouté des images
+apparaitra en même tant que la légende en survolant les images*/ 
+.portfolio figure:hover > figcaption
+{
+	opacity: 1;
+}
+
+/*------------------------------
+---------Contact et map---------
+------------------------------*/
+
+/*Z-index 2 pour que le formulaire soit en premier plan*/
+#contact .background
+{
+	width: 100%;
+    z-index: 2;
+    position: absolute;
+}
+
+#contact iframe
+{
+	width: 100%;
+	height: 641px;
+	border: 0;
+}
+
+/*Formulaire de contact*/
+.formulaire
+{
+	position: absolute;
+	right: 100px;
+	top: 53px;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(255, 255, 255, 0.7);
+	height: 500px;
+	padding: 20px 20px 20px 20px;
+	margin-bottom: 0;
+}
+
+.formulaire h2
+{
+	font-size: 1.7em;
+	margin-top: 0;
+}
+
+.formulaire p
+{
+	font-size: 0.9em;
+	margin: 0;
+}
+
+/*Pointillés sous le mot tel*/
+#span_tel
+{
+	text-decoration: underline dotted;
+}
+
+/*Style des champs de saisie*/
+input
+{
+	padding: 10px;
+	margin-bottom: 10px;
+	border: rgb(207, 208, 208) solid 1px;
+}
+
+select
+{
+	padding: 10px;
+	margin-bottom: 10px;
+	border: rgb(207, 208, 208) solid 1px;
+}
+
+/*Espace entre le champ de saisie du nom et les coordonnées*/
+#nom
+{
+	margin-top: 15px;
+}
+
+/*Style du bouton d'envoie des données saisies*/
+#submit
+{
+	margin: 20px 0 0 0;
+    background-color: rgb(92, 173, 211);
+    color: white;
+    font-weight: bold;
+    border: 1px solid #5890a8;
+    border-bottom: 3px solid #5890a8;
+    cursor: pointer;
+    width: 113px;
+    min-height: 45px;
+}
+
+/*Appliquer gras à WebAgency SAS*/
+.bold
+{
+	font-weight: bold;
+}
+
+/*Style de la zone de texte pour saisir le message*/
+textarea
+{
+	padding: 10px;
+	height: 195px;
+	border: rgb(207, 208, 208) solid 1px;
+}
+
+/*Transparence de la Carte*/
+iframe
+{
+	opacity: 0.5;
+}
+
+/*Couleur de fond bleu de la carte*/
+.iframe_background
+{
+	background-color: #62a8d0;
+}
+
+/*------------------------------------------------
+----------------------FOOTER----------------------
+------------------------------------------------*/
+footer 
+{
+	padding-top: 1em;
+	background: #f5f5f5;
+}
+
+#container_footer 
+{
+	width: 100%;
+}
+
+/*Disposer contenu footer en colonne et centrer*/
+.footer_content 
+{	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer_content ul:first-child 
+{
+	margin-bottom: 0;
+}
+
+.footer_content ul li 
+{
+	display: inline-block;
+	padding-left: 1em;
+}
+
+.footer_content ul li a 
+{
+	text-decoration: none;
+	color: #000000;
+	border: 0;
+}
+
+.img_icon 
+{
+	width: 70%;
+	-webkit-transition: all .8s ease;
+	-o-transition: all .8s ease;
+	transition: all .8s ease; 
+}
+
+/*effet bouton enfoncé au survol*/
+.img_icon:hover 
+{
+	width: 60%;
+}
+
+/*Positionner les copyrights*/
+ .footer_content div:last-child 
+ {
+ 	margin-top: 2em;
+ 	margin-left: 2.8em;
+ 	border-top: 1px solid #0088b5;
+ }
+
+ .footer_content div:last-child p 
+ {
+ 	margin-top: 0;
+ }
+
+/*------------------------------------------------
+------------------MEDIA QUERIES-------------------
+------------------------------------------------*/
+
+/*format pour tablettes*/
+@media (min-width: 767px) and (max-width: 1024px)
+{
+
+/*------------------------------
+-------------HEADER-------------
+------------------------------*/
+
+/*Masquer le menu pour grands écrans*/
+	.menu
+	{
+		display: none;
+	}
+
+	.logo
+	{
+    	padding-bottom: 10px;
+	}
+
+/*Style du boutton pour dérouler le menu*/
+	button 
+	{
+    	background-color: rgb(107, 177, 215);
+		color: white;   
+		border: none; 
+		cursor: pointer; 
+		margin: 15px 69px 4px 0;
+		height: 55px;
+    	padding: 17px 24px 15px 24px;
+    	position: relative;
+	}
+
+	button i
+	{
+		font-size: 1.5em;
+	}
+
+	.dropdown 
+	{ 
+		position: relative; 
+		display: inline-block; 
+	} 
+
+/*contenu du menu déroulant*/
+	.dropdown-content 
+	{ 
+		display: none; 
+		position: absolute; 
+		background-color: #f9f9f9; 
+		min-width: 120px; 
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+	} 
+
+	.dropdown-content a 
+	{ 
+		color: black; 
+		padding: 22px 28px; 
+		text-decoration: none; 
+		display: block; 
+		margin-right: 0;
+	} 
+
+/*Dérouler et naviguer dans le menu en le touchant*/
+	.dropdown-content a:hover
+	{
+		background-color: rgb(42, 152, 237);
+		color: white;
+	} 
+
+	.dropdown:hover .dropdown-content 
+	{ 
+		display: block; 
+	} 
+
+	.dropdown:hover .dropbtn 
+	{ 
+		background-color: rgb(42, 152, 237);
+		border: none; 
+	} 
+
+/*Masquer le slider*/
+	#slider
+	{
+		display: none;
+	}
+
+/*------------------------------
+----------Nos services----------
+------------------------------*/
+
+/*Style de la section*/
+	#nos_services
+	{
+		margin-top: 81px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.titre
+	{
+		margin-bottom: 0;
+	}
+
+	.titre h2
+	{
+		margin-bottom: 25px;
+	}
+
+	.separateur
+	{
+		width: 40%;
+	}
+
+	.circle
+	{
+		width: 25px;
+		height: 25px;
+	}
+
+/*Disposition de la section en colonne*/
+	#contenu_ns
+	{
+		flex-direction: column;
+	}
+
+	#contenu_ns p
+	{
+		text-align: left;
+	}
+
+	.image_ns
+	{
+		width: 100%;
+	}
+
+	.text_ns
+	{
+		width: 100%;
+	}
+
+	.text_ns ul
+	{
+		padding-left: 8%;
+	}
+
+	.p_ns 
+	{
+		padding-right: 76px;
+	}
+
+/*------------------------------
+----------Nos projets-----------
+------------------------------*/
+
+/*style de la section*/
+	#nos_projets
+	{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	#nos_projets h2
+	{
+		margin-bottom: 25px;
+	}
+
+	.separateur_np
+	{
+		width: 40%;
+	}
+
+	.circle_np
+	{
+		width: 25px;
+		height: 25px;
+	}
+
+	.text_np
+	{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.menu_np
+	{
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+/*disposition de la gallerie d'image en colonne*/
+	.portfolio
+	{
+		flex-direction: row;
+	}
+
+/*élargissement des images sur toute la largeur*/
+	figure
+	{
+		width: 47.50%;
+	}
+
+	figure img
+	{
+		width: 100%;
+	}
+}
+
+/*format pour smartphones*/
+@media (max-width: 767px)
+{
+/*séparateur des sections*/
+	.separateur 
+	{
+    	width: 40%;
+	}
+
+	.separateur_np
+	{
+    	width: 40%;
+	}
+
+/*------------------------------
+-------------HEADER-------------
+------------------------------*/
+
+/*Masquer le menu pour grands écrans*/
+	.menu
+	{
+		display: none;
+	}
+
+	.logo
+	{
+    	padding-bottom: 10px;
+    	padding-left: 24px;
+	}
+
+	nav img
+	{
+		height: 2.5em;
+	}
+
+/*Style du boutton pour dérouler le menu*/
+	button 
+	{
+	    background-color: rgb(107, 177, 215);
+	    color: white;
+	    border: none;
+	    cursor: pointer;
+	    margin: 19px 63px 4px 0;
+	    height: 34px;
+	    padding: 10px 12px 15px 12px;
+	    position: relative;
+	}
+
+	.dropdown 
+	{ 
+		position: relative; 
+		display: inline-block; 
+	} 
+
+/*contenu du menu déroulant*/
+	.dropdown-content 
+	{ 
+		display: none; 
+		position: absolute; 
+		background-color: #f9f9f9; 
+		min-width: 101px; 
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+	} 
+
+	.dropdown-content a 
+	{ 
+		color: black; 
+		padding: 10px 13px; 
+		text-decoration: none; 
+		display: block; 
+		margin-right: 0;
+	} 
+
+/*Dérouler et naviguer dans le menu en le touchant*/
+	.dropdown-content a:hover
+	{
+		background-color: rgb(42, 152, 237);
+		color: white;
+	} 
+
+	.dropdown:hover .dropdown-content 
+	{ 
+		display: block; 
+	} 
+
+	.dropdown:hover .dropbtn 
+	{ 
+		background-color: rgb(42, 152, 237);
+		border: none; 
+	} 
+
+/*Masquer le slider*/
+	#slider
+	{
+		display: none;
+	}
+
+/*------------------------------
+----------Nos services----------
+------------------------------*/
+
+/*Style de la section*/
+	#nos_services
+	{
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.titre
+	{
+		margin-bottom: 13px;
+	}
+
+	.titre h2 
+	{
+		margin-top: 0;
+		margin-bottom: 22px;
+	}
+
+	.titre p 
+	{
+	    margin-left: 8%;
+	    margin-right: 8%;
+	}
+
+	#contenu_ns 
+	{
+	    display: flex;
+	    flex-direction: column;
+	}
+
+	.image_ns 
+	{
+    	width: 100%;
+	}
+
+	.image_ns img 
+	{
+    	width: 100%;
+	}
+
+	.text_ns 
+	{
+    	width: 100%;
+	}
+
+	.text_ns ul 
+	{
+    	padding-left: 18px;
+    	padding-right: 13px;
+	}
+
+	#nos_services 
+	{
+	    margin: 100px auto 0px auto;
+	}
+
+/*------------------------------
+----------Nos projets------------
+------------------------------*/
+
+/*Style de la section*/
+	#nos_projets 
+	{
+    	padding: 58px 0px 20px 0px;
+	}
+
+	#nos_projets h2
+	{
+		margin-bottom: 22px;
+	}
+
+	.text_np 
+	{
+    	margin-left: 10%;
+    	margin-right: 10%;
+	}
+
+/*Style du menu section nos projets*/
+	.menu_np  
+	{
+    	margin: 10% 20% 10% 20%;
+	}
+
+	.menu_np ul 
+	{
+	    flex-direction: column;
+	}
+
+	.menu_np li 
+	{
+	    margin: 0;
+	    width: 100%;
+	    padding: 0;
+	}
+
+	.menu_np i
+	{
+		display: none;
+	}
+
+/*style de la galerie d'image du portfolio*/
+	.portfolio
+	{
+		flex-direction: column;
+	}
+
+	figure
+	{
+		width: 100%;
+	}
+
+/*------------------------------
+------------Contact-------------
+------------------------------*/
+	#contact
+	{
+		background-color: rgb(245, 245, 245);
+	}
+
+/*disposer le formulaire au dessus de la map en annulant la position absolue*/
+	#contact .background
+	{
+		position: static;
+	}
+
+	.formulaire
+	{
+		position: static;
+	    background-color: rgb(245, 245, 245);
+	    width: 90.2%;
+	    text-align: center;
+	    height: 522px;
+	}
+
+	.formulaire h2
+	{
+		margin-bottom: 10px;
+	}
+
+	#submit
+	{
+		width: 133px;
+	}
+
+	#contact iframe
+	{
+		height: 580px;
+	}
+
+
+/*pied de page*/
+	footer 
+	{
+    	padding-top: 0;
+	}
+
+	.footer_content ul:first-child 
+	{
+    	padding-left: 0;
+	}
+
+	.footer_content ul li 
+	{
+    	padding-left: 0.3em;
+	}
+
+	.footer_content ul li a 
+	{
+    	font-size: 0.6em;
+	}
+
+	.img_icon 
+	{
+    	width: 54%;
+	}
+
+	.footer_content div:last-child 
+	{
+    	margin-top: 0.7em;
+    	margin-left: 0.7em;
+	}
+
+	.footer_content div:last-child p 
+	{
+	    font-size: 0.8em;
+	}
+}
